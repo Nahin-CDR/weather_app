@@ -1,16 +1,7 @@
 # weather_app
 
-A new Flutter project.
 
-## Getting Started
+![WhatsApp Image 2022-08-31 at 6 01 44 PM](https://user-images.githubusercontent.com/45636041/187673909-5f8847b5-0be9-4975-b9c6-5e84d9dbe608.jpeg)
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+api : https://api.openweathermap.org/data/2.5/weather?q=mymensingh&appid=50978f07fb55fae4d2bca33d21cc1912
