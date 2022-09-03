@@ -47,8 +47,6 @@ Widget weatherView({
                   )
               ),
             ),
-
-
           ],
         ),
         const SizedBox(height: 10.0,),
@@ -61,12 +59,12 @@ Widget weatherView({
         ),
         Text("Feels Like : $feelsLike",style:const TextStyle(fontSize: 15,color: Colors.grey)),
         Text("$city , $country",style:const TextStyle(fontSize: 15,color: Colors.grey)),
-        Text("Minimum Temperature : $minTemperature",style:const TextStyle(fontSize: 15,color: Colors.grey)),
-        Text("Minimum Temperature : $maxTemperature",style:const TextStyle(fontSize: 15,color: Colors.grey)),
+        //Text("Minimum Temperature : $minTemperature",style:const TextStyle(fontSize: 15,color: Colors.grey)),
+       // Text("Minimum Temperature : $maxTemperature",style:const TextStyle(fontSize: 15,color: Colors.grey)),
         Text("Humidity : $humidity",style:const TextStyle(fontSize: 15,color: Colors.grey)),
-        Text("Sunrise : $sunrise",style:const TextStyle(fontSize: 15,color: Colors.grey)),
-        Text("Sunset : $sunset",style:const TextStyle(fontSize: 15,color: Colors.grey)),
-        Text("Visibility : $visibility km",style:const TextStyle(fontSize: 15,color: Colors.grey)),
+       // Text("Sunrise : $sunrise",style:const TextStyle(fontSize: 15,color: Colors.grey)),
+       // Text("Sunset : $sunset",style:const TextStyle(fontSize: 15,color: Colors.grey)),
+        Text("Visibility : $visibility m",style:const TextStyle(fontSize: 15,color: Colors.grey)),
         Text("Wind speed : $windSpeed ",style:const TextStyle(fontSize: 15,color: Colors.grey)),
         Text("Pressure : $pressure hPa",style:const TextStyle(fontSize: 15,color: Colors.grey)),
       ],
