@@ -1,7 +1,5 @@
-
 import 'dart:async';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-
 import 'display_weather.dart';
 import 'services.dart';
 import 'package:flutter/material.dart';
@@ -15,6 +13,7 @@ class HomePage extends StatefulWidget {
 
 
 class _HomePageState extends State<HomePage> {
+
   bool loading = true;
   Services client = Services();
   WeatherModel? data;
@@ -29,7 +28,6 @@ class _HomePageState extends State<HomePage> {
     sunsetTime = DateTime.fromMicrosecondsSinceEpoch(data!.sys.sunset);
   }
 
-
   @override
   void initState() {
     super.initState();
@@ -40,7 +38,6 @@ class _HomePageState extends State<HomePage> {
       });
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -70,6 +67,7 @@ class _HomePageState extends State<HomePage> {
                 return Column(
                   children: [
                     weatherView(
+                      screenWidth : MediaQuery.of(context).size.width-50,
                       //icon: Icons.sunny,
                       currentTemperature: "${(data!.main.temp-273.15).toStringAsFixed(2)} \u2103",
                       city: data!.name,
@@ -85,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                       windSpeed: "${data!.wind.speed} km/h",
                       weatherOverView: data!.weather[0].description,
                     ),
-                    const SizedBox(height: 10,),
+                    const SizedBox(height: 30,),
                     const Divider(thickness: 1,color: Colors.orange,),
                     SizedBox(
                       width:MediaQuery.of(context).size.width-50,
@@ -111,6 +109,7 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       width: MediaQuery.of(context).size.width-40,
                       child: ElevatedButton.icon(
+
                         style: ElevatedButton.styleFrom(
                             shadowColor: Colors.orange,
                             minimumSize: const Size.fromHeight(50.0)),
@@ -120,20 +119,21 @@ class _HomePageState extends State<HomePage> {
                               city = inputTextController.text.trim();
                             });
                           }
-                          else{
+                          else {
                             ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text("Something Went wrong !",style: TextStyle(fontSize: 12.00, color: Colors.white),),
-                              duration: Duration(milliseconds: 1500),
-                              backgroundColor: Colors.red,
-                            ));
+                                const SnackBar(content: Text(
+                                  "Something Went wrong !", style: TextStyle(
+                                    fontSize: 12.00, color: Colors.white),),
+                                  duration: Duration(milliseconds: 1500),
+                                  backgroundColor: Colors.red,
+                                ));
                           }
-
-
                         },
                         icon: const Icon(Icons.spellcheck_outlined,size: 32),
                         label: const Text("Check"),
                       ),
-                    )
+                    ),
+                    const SizedBox(height: 50),
                   ],
                 );
               }
